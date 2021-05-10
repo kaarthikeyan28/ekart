@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript Calculator</title>
+  <link rel="icon" href="ekart.png" type="image/icon type">
+	<link rel="stylesheet" href="calculator.css">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  display:fixed;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+
+.ship .clear{
+    margin-top:5px;
+    border-radius:5px;
+    width:100px;
+    margin-left:10px;
+    height:50px;
+    border:2px solid black;
+    color:white;
+    background-color:green;
+}
+</style>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+  <a href="F:\jaga\index.html">Home</a>
+  <a href="#calculator" class="active">Calculator</a>
+  <a href="F:\jaga\about.html">About</a>
+  <a href="#contact">Contact Us</a>
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+	<script>
+	function calcNumbers(result){
+		form.displayResult.value=form.displayResult.value+result;
+	}
+
+    function clear(){
+        form.displayResult.value="0";
+    }
+	</script>
+	<div class="container">
+		<form name="form">
+		<div class="display">
+			<input type="text" placeholder="0" name="displayResult" />
+		</div>
+			<div class="buttons">
+			  <div class="row">
+				<input type="button" name="b7" value="7" onClick="calcNumbers(b7.value)">
+				  <input type="button" name="b8" value="8" onClick="calcNumbers(b8.value)">
+				  <input type="button" name="b9" value="9" onClick="calcNumbers(b9.value)">
+				  <input type="button" name="addb" value="+" onClick="calcNumbers(addb.value)">
+				</div>
+				
+				<div class="row">
+				<input type="button" name="b4" value="4" onClick="calcNumbers(b4.value)">
+				  <input type="button" name="b5" value="5" onClick="calcNumbers(b5.value)">
+				  <input type="button" name="b6" value="6" onClick="calcNumbers(b6.value)">
+				  <input type="button" name="subb" value="-" onClick="calcNumbers(subb.value)">
+				</div>
+				
+				<div class="row">
+				<input type="button" name="b1" value="1" onClick="calcNumbers(b1.value)">
+				  <input type="button" name="b2" value="2" onClick="calcNumbers(b2.value)">
+				  <input type="button" name="b3" value="3" onClick="calcNumbers(b3.value)">
+				  <input type="button" name="mulb" value="*" onClick="calcNumbers(mulb.value)">
+				</div>
+				
+				<div class="row">
+				<input type="button" name="b0" value="0" onClick="calcNumbers(b0.value)">
+				  <input type="button" name="potb" value="." onClick="calcNumbers(potb.value)">
+				  <input type="button" name="divb" value="/" onClick="calcNumbers(divb.value)">
+				  <input type="button" class="red" value="=" onClick="displayResult.value=eval(displayResult.value)">
+				</div>
+
+                
+    <div class="ship">
+        <button class='clear' onclick="clear()">Clear</button>
+    </div>
+			</div>
+		
+		</form>
+	</div>
+
+</body>
+	
+</html>
